@@ -18,11 +18,11 @@ class CreateGastoTable extends Migration
             $table->float('monto');
             $table->date('fecha');
             $table->string('descripcion')->nullable();            
-            $table->string('foto');
-            $table->float('gasto_credito');
-            $table->int('categoriaG_id');
-            $table->int('dolar_id');
-            $table->int('billetera_id');
+            $table->string('foto')->nullable();
+            $table->boolean('gasto_credito');
+            $table->integer('categoria_gasto_id');
+            $table->integer('dolar_id');
+            $table->integer('billetera_id');
             $table->timestamps();
         });
     }
