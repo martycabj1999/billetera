@@ -9,9 +9,7 @@ class Billetera extends Model
   protected $table = "billetera";
 
   protected $fillable = [
-    'nombre',
-    'balance',
-    'total_credito'
+    'nombre', 'balance', 'total_credito', 'dolar_id', 'user_id'
   ];
 
   public function user()

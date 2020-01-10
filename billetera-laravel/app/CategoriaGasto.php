@@ -4,17 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Perfil extends Model{ 
-    
+class Perfil extends Model
+{
+
   protected $table = "categoria_gasto";
 
   protected $fillable = [
-    'nombre', 'descripcion'
+    'nombre',
+    'descripcion'
   ];
 
-  public function gasto(){
-    //Relacion de muchos usuarios de un perfil
+  public function gasto()
+  {
     return $this->hasMany('App\Gasto');
   }
-
 }

@@ -9,10 +9,8 @@ class Ingreso extends Model
   protected $table = "ingreso";
 
   protected $fillable = [
-    'nombre',
-    'fecha',
-    'foto',
-    'descripcion'
+    'nombre', 'fecha', 'foto', 'descripcion', 'categoria_id', 'dolar_id',
+    'billetera_id'
   ];
 
   public function billetera()
