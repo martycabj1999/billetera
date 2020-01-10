@@ -10,7 +10,7 @@ class Perfil extends Model{
 
   protected $fillable = [
     'monto', 'fecha', 'descripcion', 'foto', 
-    'gasto_credito', 'categoriaG_id', 'dolar_id',
+    'gasto_credito', 'categoria_gasto_id', 'dolar_id',
     'billetera_id'
   ];
 
