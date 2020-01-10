@@ -14,18 +14,15 @@ class Perfil extends Model
     'dolar_id', 'billetera_id'
   ];
 
-  public function billetera()
-  {
+  public function billetera(){
     return $this->belongsTo('App\Billetera');
   }
 
-  public function categoria_gasto()
-  {
+  public function categoria_gasto(){
     return $this->belongsTo('App\CategoriaGasto');
   }
 
-  public function dolar()
-  {
+  public function dolar(){
     return $this->hasOne('App\Dolar');
   }
 }
