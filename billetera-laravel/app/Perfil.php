@@ -14,7 +14,7 @@ class Perfil extends Model
     'descripcion'
   ];
 
-  public function users(){
+  public function User(){
     return $this->hasMany('App\User');
   }
 }
