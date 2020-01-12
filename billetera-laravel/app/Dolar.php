@@ -13,15 +13,18 @@ class Perfil extends Model
     'precio', 'fecha'
   ];
 
-  public function billetera(){
+  public function billetera()
+  {
     return $this->hasOne('App\Billetera');
   }
 
-  public function gasto(){
+  public function gasto()
+  {
     return $this->hasOne('App\Gasto');
   }
 
-  public function ingreso(){
+  public function ingreso()
+  {
     return $this->hasOne('App\Ingreso');
   }
 }

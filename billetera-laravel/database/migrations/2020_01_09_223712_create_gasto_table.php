@@ -15,7 +15,7 @@ class CreateGastoTable extends Migration
     {
         Schema::create('gasto', function (Blueprint $table) {
             $table->increments('id');
-            $table->float('monto');
+            $table->float('monto',10,2);
             $table->date('fecha');
             $table->string('descripcion')->nullable();            
             $table->string('foto')->nullable();

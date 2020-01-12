@@ -16,7 +16,7 @@ class CreateIngresoTable extends Migration
         Schema::create('ingreso', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->float('monto');
+            $table->float('monto',10,2);
             $table->string('descripcion')->nullable();
             $table->date('fecha');
             $table->string('foto')->nullable();

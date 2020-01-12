@@ -14,7 +14,8 @@ class Perfil extends Model
     'descripcion'
   ];
 
-  public function gasto() {
+  public function gasto()
+  {
     return $this->hasMany('App\Gasto');
   }
 }

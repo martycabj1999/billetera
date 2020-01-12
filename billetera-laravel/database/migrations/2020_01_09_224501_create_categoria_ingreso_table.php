@@ -16,7 +16,7 @@ class CreateCategoriaIngresoTable extends Migration
         Schema::create('categoria_ingreso', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('nombre');
+            $table->string('nombre',30);
             $table->string('descripcion')->nullable();
         });
     }

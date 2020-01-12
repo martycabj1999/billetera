@@ -15,7 +15,7 @@ class CreateDolarTable extends Migration
     {
         Schema::create('dolar', function (Blueprint $table) {
             $table->increments('id');
-            $table->float('precio');
+            $table->float('precio',3,2);
             $table->date('fecha');
             $table->timestamps();
         });

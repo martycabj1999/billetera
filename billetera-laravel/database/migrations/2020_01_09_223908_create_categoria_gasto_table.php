@@ -15,7 +15,7 @@ class CreateCategoriaGastoTable extends Migration
     {
         Schema::create('categoria_gasto', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+            $table->string('nombre',30);
             $table->string('descripcion')->nullable();
             $table->timestamps();
         });

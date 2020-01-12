@@ -16,9 +16,9 @@ class CreateBilleteraTable extends Migration
         Schema::create('billetera', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->float('balance');
-            $table->string('nombre');
-            $table->float('total_credito');
+            $table->float('balance',10,2);
+            $table->string('nombre',50);
+            $table->float('total_credito',10,2);
         });
     }
 
