@@ -9,7 +9,7 @@ class Ingreso extends Model
   protected $table = "ingreso";
 
   protected $fillable = [
-    'nombre', 'fecha', 'foto', 'descripcion', 'categoria_id', 'dolar_id',
+    'monto', 'fecha', 'foto', 'descripcion', 'categoria_id', 'dolar_id',
     'billetera_id'
   ];
 
