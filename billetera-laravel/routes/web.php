@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,10 +33,10 @@ Route::get('/dolares', 'DolarController@index');
 Route::get('/dolares/alta','DolarController@create');
 Route::post('/dolares','DolarController@store');
 
-Route::get('/categoriaGastos', 'CategoriaGastoController@index');
-Route::get('/categoriaGastos/alta','CategoriaGastoController@create');
-Route::post('/categoriaGastos','CategoriaGastoController@store');
+Route::get('/categorias_gastos', 'CategoriaGastoController@index');
+Route::get('/categorias_gastos/alta','CategoriaGastoController@create');
+Route::post('/categorias_gastos','CategoriaGastoController@store');
 
-Route::get('/categoriaIngresos', 'CategoriaIngresoController@index');
-Route::get('/categoriaIngresos/alta','CategoriaIngresoController@create');
-Route::post('/categoriaIngresos','CategoriaIngresoController@store');
+Route::get('/categorias_ingresos', 'CategoriaIngresoController@index');
+Route::get('/categorias_ingresos/alta','CategoriaIngresoController@create');
+Route::post('/categorias_ingresos','CategoriaIngresoController@store');

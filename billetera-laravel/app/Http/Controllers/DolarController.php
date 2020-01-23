@@ -16,7 +16,7 @@ class DolarController extends Controller
     public function index()
     {
         $dolares = Dolar::all();
-        return view('dolares/list',compact('dolares'));
+        return view('dolares/list', compact('dolares'));
     }
 
     /**
@@ -27,7 +27,7 @@ class DolarController extends Controller
     public function create()
     {
         $dolares = Dolar::all();
-        return view('dolares/create',compact('dolares'));
+        return view('dolares/create', compact('dolares'));
     }
 
     /**
@@ -37,16 +37,17 @@ class DolarController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(){
+    public function store()
+    {
         $this->validate(request(), [
-        'precio' => ['required'],
-        'fecha' => ['required']
+            'precio' => ['required'],
+            'fecha' => ['required']
         ]);
         $datos = request()->all();
         Dolar::create($datos);
 
         return redirect()->to('dolares');
-      }
+    }
     /**
      * Display the specified resource.
      *

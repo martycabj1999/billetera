@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 
-use App\Ingreso;
+use App\CategoriaIngreso;
 use Illuminate\Http\Request;
 
-class IngresoController extends Controller
+class CategoriaIngresoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class IngresoController extends Controller
      */
     public function index()
     {
-        $ingresos = Ingreso::all();
-        return view('ingresos/list',compact('ingresos'));
+        $categorias_ingresos = CategoriaIngreso::all();
+        return view('categorias_ingresos/list', compact('categorias_ingresos'));
     }
 
     /**
@@ -26,8 +26,8 @@ class IngresoController extends Controller
      */
     public function create()
     {
-        $ingresos = Ingreso::all();
-        return view('ingresos/create',compact('ingresos'));
+        $categorias_ingresos = CategoriaIngreso::all();
+        return view('categorias_ingresos/create', compact('categorias_ingresos'));
     }
 
     /**
@@ -37,22 +37,23 @@ class IngresoController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(){
+    public function store()
+    {
         $this->validate(request(), [
-        'monto' => ['required']
+            'nombre' => ['required']
         ]);
         $datos = request()->all();
-        Ingreso::create($datos);
+        CategoriaIngreso::create($datos);
 
-        return redirect()->to('ingresos');
-      }
+        return redirect()->to('categorias_ingresos');
+    }
     /**
      * Display the specified resource.
      *
-     * @param  \App\Ingreso  $ingreso
+     * @param  \App\CategoriaIngreso  $categorias_ingresos
      * @return \Illuminate\Http\Response
      */
-    public function show(Ingreso $ingreso)
+    public function show(CategoriaIngreso $categorias_ingresos)
     {
         //
     }
@@ -60,10 +61,10 @@ class IngresoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Ingreso  $ingreso
+     * @param  \App\CategoriaIngreso  $categorias_ingresos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ingreso $ingreso)
+    public function edit(CategoriaIngreso $categorias_ingresos)
     {
         //
     }
@@ -72,10 +73,10 @@ class IngresoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Ingreso  $ingreso
+     * @param  \App\CategoriaIngreso  $categorias_ingresos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ingreso $ingreso)
+    public function update(Request $request, CategoriaIngreso $categorias_ingresos)
     {
         //
     }
@@ -83,10 +84,10 @@ class IngresoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Ingreso  $ingreso
+     * @param  \App\CategoriaIngreso  $categorias_ingresos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ingreso $ingreso)
+    public function destroy(CategoriaIngreso $categorias_ingresos)
     {
         //
     }

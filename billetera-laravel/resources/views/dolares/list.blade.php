@@ -17,11 +17,6 @@
         <tr data-id="{{$dolar->id}}">
             <td>{{$dolar->precio}}</td>
             <td>{{$dolar->fecha}}</td>
-            <td>
-                <a href='{{ url("dolar") }}/editar/{{$dolar->id}}' title="Editar"><i class="fa fa-edit"></i></a>
-                <a href='#' title="Eliminar" class="btn-delete"><i class="fa fa-times"></i></a>
-            </td>
-
         </tr>
         @endforeach
 

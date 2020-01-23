@@ -19,11 +19,6 @@
             <td>{{$ingreso->id}}</td>
             <td>{{$ingreso->monto}}</td>
             <td>{{$ingreso->descripcion}}</td>
-            <td>
-                <a href='{{ url("ingreso") }}/editar/{{$ingreso->id}}' title="Editar"><i class="fa fa-edit"></i></a>
-                <a href='#' title="Eliminar" class="btn-delete"><i class="fa fa-times"></i></a>
-            </td>
-
         </tr>
         @endforeach
 

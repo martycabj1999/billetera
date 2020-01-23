@@ -2,33 +2,31 @@
     <div class="card" style="width: 40rem;">
 
         <div class="card-header" align="center">
-            <h2>Alta Ingreso</h2>
+            <h2>Alta Categoria Gasto</h2>
         </div>
         <div class="card-body">
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
-                    @foreach ($errors->all() as $error) 
-                        <li>{{ $error }}</li>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
                     @endforeach
                 </ul>
             </div>
             @endif
-            <form method="POST" action="{{ url('ingresos') }}">
+            <form method="POST" action="{{ url('categorias_gastos') }}">
                 {!! csrf_field() !!}
 
                 <div class="form-row">
                     <div class="form-group col">
-                        <label for="monto">Monto</label>
-                        <input class="form-control" type="number" name="monto" id="monto" value="{{ old('monto') }}" placeholder="Monto" />
+                        <label for="nombre">Nombre</label>
+                        <input class="form-control" type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" placeholder="Nombre" />
                     </div>
                 </div>
-
-
                 <div class="form-row">
                     <div class="form-group col">
                         <label for="descripcion">Descripcion</label>
-                        <input class="form-control" type="text" style="width:608px; height:100px;" id="descripcion" value="{{ old('descripcion') }}" name="descripcion" placeholder="Descripcion" />
+                        <input class="form-control" type="text" style="width:200px; height:100px;" id="descripcion" value="{{ old('descripcion') }}" name="descripcion" placeholder="Descripcion" />
                     </div>
                 </div>
 
@@ -39,7 +37,7 @@
                         <button type="submit" class="btn btn-primary btn-block">Crear</button>
                     </div>
                     <div class="col">
-                        <a href="{{ url('ingresos') }}" class="btn btn-warning btn-block">Volver</a>
+                    <a href="{{ url('categorias_gastos') }}" class="btn btn-warning btn-block">Volver</a>
                     </div>
                 </div>
 

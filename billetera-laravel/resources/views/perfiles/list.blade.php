@@ -19,11 +19,6 @@
             <td>{{$perfil->id}}</td>
             <td>{{$perfil->nombre}}</td>
             <td>{{$perfil->descripcion}}</td>
-            <td>
-                <a href='{{ url("perfil") }}/editar/{{$perfil->id}}' title="Editar"><i class="fa fa-edit"></i></a>
-                <a href='#' title="Eliminar" class="btn-delete"><i class="fa fa-times"></i></a>
-            </td>
-
         </tr>
         @endforeach
 

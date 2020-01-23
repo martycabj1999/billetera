@@ -16,7 +16,7 @@ class IngresoController extends Controller
     public function index()
     {
         $ingresos = Ingreso::all();
-        return view('ingresos/list',compact('ingresos'));
+        return view('ingresos/list', compact('ingresos'));
     }
 
     /**
@@ -27,7 +27,7 @@ class IngresoController extends Controller
     public function create()
     {
         $ingresos = Ingreso::all();
-        return view('ingresos/create',compact('ingresos'));
+        return view('ingresos/create', compact('ingresos'));
     }
 
     /**
@@ -37,15 +37,16 @@ class IngresoController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(){
+    public function store()
+    {
         $this->validate(request(), [
-        'monto' => ['required']
+            'monto' => ['required']
         ]);
         $datos = request()->all();
         Ingreso::create($datos);
 
         return redirect()->to('ingresos');
-      }
+    }
     /**
      * Display the specified resource.
      *

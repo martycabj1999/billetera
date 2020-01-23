@@ -16,7 +16,7 @@ class PerfilController extends Controller
     public function index()
     {
         $perfiles = Perfil::all();
-        return view('perfiles/list',compact('perfiles'));
+        return view('perfiles/list', compact('perfiles'));
     }
 
     /**
@@ -27,7 +27,7 @@ class PerfilController extends Controller
     public function create()
     {
         $perfiles = Perfil::all();
-        return view('perfiles/create',compact('perfiles'));
+        return view('perfiles/create', compact('perfiles'));
     }
 
     /**
@@ -37,7 +37,8 @@ class PerfilController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(){
+    public function store()
+    {
         $this->validate(request(), [
             'nombre' => ['required']
         ]);
@@ -45,7 +46,7 @@ class PerfilController extends Controller
         Perfil::create($datos);
 
         return redirect()->to('perfiles');
-      }
+    }
     /**
      * Display the specified resource.
      *
