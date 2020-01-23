@@ -26,3 +26,15 @@ Route::post('/ingresos','IngresoController@store');
 Route::get('/perfiles', 'PerfilController@index');
 Route::get('/perfiles/alta','PerfilController@create');
 Route::post('/perfiles','PerfilController@store');
+
+Route::get('/dolares', 'DolarController@index');
+Route::get('/dolares/alta','DolarController@create');
+Route::post('/dolares','DolarController@store');
+
+Route::get('/categoriaGastos', 'CategoriaGastoController@index');
+Route::get('/categoriaGastos/alta','CategoriaGastoController@create');
+Route::post('/categoriaGastos','CategoriaGastoController@store');
+
+Route::get('/categoriaIngresos', 'CategoriaIngresoController@index');
+Route::get('/categoriaIngresos/alta','CategoriaIngresoController@create');
+Route::post('/categoriaIngresos','CategoriaIngresoController@store');
