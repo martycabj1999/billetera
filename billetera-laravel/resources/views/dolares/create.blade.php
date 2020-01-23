@@ -20,7 +20,7 @@
                 <div class="form-row">
                     <div class="form-group col">
                         <label for="precio">Precio</label>
-                        <input class="form-control" type="number" name="precio" id="precio" value="{{ old('precio') }}" placeholder="Precio" />
+                        <input class="form-control" type="number" min="0" step="0.01" name="precio" id="precio" value="{{ old('precio') }}" placeholder="Precio" />
                     </div>
                 </div>
 
